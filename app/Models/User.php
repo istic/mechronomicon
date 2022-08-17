@@ -58,4 +58,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    /**
+     * Get the characters for the user.
+     */
+    public function characters()
+    {
+        return $this->hasMany(Character::class);
+    }
 }
