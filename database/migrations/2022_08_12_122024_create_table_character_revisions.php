@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Character;
 
 return new class () extends Migration {
     /**
@@ -17,7 +18,7 @@ return new class () extends Migration {
             $table->timestamps();
 
             $table->string('name');
-            $table->string('status');
+            $table->string('vital_status');
             $table->set('status', ['draft', 'approval', 'revise', 'current']);
             $table->string('version')->unique();
             $table->softDeletes();
